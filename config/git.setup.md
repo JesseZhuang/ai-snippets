@@ -11,11 +11,10 @@ Look for files named `id_ed25519` / `id_ed25519.pub` or `id_rsa` / `id_rsa.pub`.
 ## 2. Generate a New SSH Key
 
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_personal -C "your_email@example.com"
 ```
 
 When prompted:
-- Press **Enter** to accept the default file location (`~/.ssh/id_ed25519`).
 - Enter a passphrase (recommended) or press **Enter** for none.
 
 > If your system doesn't support Ed25519, fall back to RSA:
@@ -27,7 +26,7 @@ When prompted:
 
 ```bash
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ed25519_personal
 ```
 
 ### macOS: Persist the Key Across Reboots
@@ -35,15 +34,16 @@ ssh-add ~/.ssh/id_ed25519
 Add the following to `~/.ssh/config` (create the file if it doesn't exist):
 
 ```text
-Host github.com-jz
+Host github.com-personal
    HostName github.com
    User git
-   IdentityFile ~/.ssh/id_rsa_jz
+   IdentityFile ~/.ssh/id_rsa_personal
+   IdentitiesOnly yes
 
-Host github.com-jzzcoding
+Host github.com-work
    HostName github.com
    User git
-   IdentityFile ~/.ssh/id_ed25519_jz
+   IdentityFile ~/.ssh/id_ed25519_work
 ```
 
 Then load the key into the keychain (optional):
@@ -55,7 +55,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ## 4. Copy the Public Key
 
 ```bash
-pbcopy < ~/.ssh/id_ed25519.pub   # macOS
+pbcopy < ~/.ssh/id_ed25519_personal.pub   # macOS
 ```
 
 On Linux, use one of:
@@ -77,7 +77,7 @@ cat ~/.ssh/id_ed25519.pub        # then copy manually
 ## 6. Verify the Connection
 
 ```bash
-ssh -T git@github.com
+ssh -T git@github.com-personal
 ```
 
 Expected output:
@@ -91,13 +91,13 @@ Hi <username>! You've successfully authenticated, but GitHub does not provide sh
 For new clones, use the SSH URL:
 
 ```bash
-git clone git@github.com:owner/repo.git
+git clone git@github.com-personal:owner/repo.git
 ```
 
 To switch an existing repo from HTTPS to SSH:
 
 ```bash
-git remote set-url origin git@github.com:owner/repo.git
+git remote set-url origin git@github.com-personal:owner/repo.git
 ```
 
 Verify:

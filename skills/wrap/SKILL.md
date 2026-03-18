@@ -9,4 +9,4 @@ description: wrap up work, commit with a reasonable summary message, push
 1. add unstaged changes (use repo context to decide which ones to exclude, for example, hidden folder or cache files)
 1. check trailing whitespace `git diff --check && git diff --cached --check`
 1. summarize changes in one sentence less than 10 words
-1. commit with the message (important: do not add anthing extra, just use the summarized message) and push
+1. commit with the message (important: do not add anything extra (for example, Made-with Cursor), just use the summarized message) and push
