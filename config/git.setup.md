@@ -39,11 +39,14 @@ Host github.com-personal
    User git
    IdentityFile ~/.ssh/id_rsa_personal
    IdentitiesOnly yes
+   UseKeychain yes
 
 Host github.com-work
    HostName github.com
    User git
    IdentityFile ~/.ssh/id_ed25519_work
+   IdentitiesOnly yes
+   UseKeychain yes
 ```
 
 Then load the key into the keychain (optional):
