@@ -7,10 +7,10 @@ description: Draft Astro blog posts for LeetCode problems using the local 0-leet
 
 replace the argument in commands below with the newly generated test file with to run tests only in that file
 
-- Python `cd InCodeLearning-Python3 && source venv312/bin/activate && python -m unittest discover -s test -p "test_binary_search.py"`
+- Python `cd InCodeLearning-Python3 && source .venv/bin/activate && python -m unittest discover -s test -p "test_binary_search.py"`
 - Java `cd algorithm-java && ./gradlew test --tests "hash.FindUniqueBinaryStringTest"`
 - Rust `cd rust cargo test tree::lowest_common_ancestor_bt_iii`
-- C++ `CSAPP/leetcode/cmake-build-debug/test/LeetCode_test --gtest_filter=deque.basic_calculator_ii`, cmake is at `/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake` (do not rebuild unless you need to)
+- C++ `CSAPP/leetcode/cmake-build-debug/test/LeetCode_test --gtest_filter=deque.basic_calculator_ii`, use system cmake or `/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake`
 
 ## workflow
 
