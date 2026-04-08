@@ -26,3 +26,15 @@
 - Template: `src/content/blog/0-leet-template.md`
 - Posts: `src/content/blog/leet-<4digit>-<kebab-title>.md`
 - Sections: YAML front matter, Description, Idea (with complexity), Java, Python, C++, Rust
+
+# Mixed Code Block format example
+
+```javascript []
+console.log('Hello world!')
+```
+```python []
+print('Hello world!')
+```
+```ruby []
+puts 'Hello world!'
+```

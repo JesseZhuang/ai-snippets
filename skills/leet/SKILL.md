@@ -26,6 +26,7 @@ replace the argument in commands below with the newly generated test file with t
 1. following the template `astro-leet/src/content/blog/0-leet-template.md`, **use code committed and pushed in above step** to create a markdown file (name `leet-<4 digit id>-<kebab-title>.md`) to explain the solutions (including time and space complexities). Draw ascii diagrams as needed to help the explanation. If equation is needed, refer to https://katex.org/docs/api. ask the user to review. make sure the constraints section from leetcode is included.
 1. after user finish, remove the line `draft: true` and make sure the line `featured: true` is in the file.
 1. look for oldest posts with `featured: true` line (can use a temp file to remember), keep 6 most recent featured post in total
-1. commit in astro-leet repo and finish.
+1. commit and push astro-leet repo.
+1. generate mixed code blocks (see section "# Mixed Code Block format example" in references.md, one group of blocks for each solution) put in user's pasteboard.
 
 See [references.md](references.md) for repo layouts and file conventions.
