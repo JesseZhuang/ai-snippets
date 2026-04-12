@@ -27,6 +27,10 @@
 - Posts: `src/content/blog/leet-<4digit>-<kebab-title>.md`
 - Sections: YAML front matter, Description, Idea (with complexity), Java, Python, C++, Rust
 
+# git operations
+
+See [token path](../../config/pat.path.md)
+
 # Mixed Code Block format example
 
 ```javascript []
