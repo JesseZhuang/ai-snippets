@@ -3,7 +3,7 @@ name: leetcode
 description: Draft Astro blog posts for LeetCode problems using the local 0-leet-template, then implement solutions plus tests in Java (algorithm-java), Python (InCodeLearning-Python3), C++ (CSAPP/leetcode), and Rust (in_code_learning_rust/crates/leet), with explicit review checkpoints before creating files, running tests, or committing astro-leet.
 ---
 
-agent only need to slack me success/failure and one sentence summary. save logs of the workflow in /tmp/pinclaw-leet-<date and time>
+agent only need to slack me success/failure and one sentence summary. save logs of the workflow in /tmp/leet-<date and time>
 
 ## commands to run unit tests
 
