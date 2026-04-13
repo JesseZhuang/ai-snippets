@@ -1,9 +1,11 @@
 ---
 name: article
-description: Write Astro blog posts for Database Learnings.
+description: Write Astro blog posts
 ---
 
 This [blog post](../../../astro-leet/src/data/blog/design-how-tidb-tso-works.md) is a good exmaple of database learning article I would like to write.
+
+Another good [example](../../../astro-leet/src/data/blog/aiml-generative-ai-large-language-models-1.md) about AI.
 
 for git operations, see [token path](../../config/pat.path.md)
 
