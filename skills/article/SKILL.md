@@ -9,7 +9,7 @@ Another good [example](../../../astro-leet/src/data/blog/aiml-generative-ai-larg
 
 for git operations, see [token path](../../config/pat.path.md)
 
-agent only need to slack me success/failure and one sentence summary. save logs of the workflow in /tmp/pinclaw-article-<date and time>
+agent only need to slack me success/failure and one sentence summary. save logs of the workflow in /tmp/blog-article-<date and time>
 
 ## workflow
 
