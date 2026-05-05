@@ -40,6 +40,7 @@ Host github.com-personal
    IdentityFile ~/.ssh/id_rsa_personal
    IdentitiesOnly yes
    UseKeychain yes
+   AddKeysToAgent no # do not mess with company keys in the ssh agent
 
 Host github.com-work
    HostName github.com
@@ -47,6 +48,7 @@ Host github.com-work
    IdentityFile ~/.ssh/id_ed25519_work
    IdentitiesOnly yes
    UseKeychain yes
+   AddKeysToAgent no
 ```
 
 Then load the key into the keychain (optional):
@@ -148,3 +150,9 @@ Then in individual repo, you can override for the repo only with git config comm
 git config user.name "<github user id>"
 git config user.email <email>
 ```
+
+## workaround
+
+In some minimal or sandboxed environments, ssh may not be allowed.
+
+A temporary workaround is to use PAT (personal access toke) in url, https://jzzcoding:<pat>@github.com/jzleetcode/jzleetcode.github.io.git. Note to restrict permission so that the PAT is not leaked.
