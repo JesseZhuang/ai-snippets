@@ -5,6 +5,15 @@ description: Draft Astro blog posts for LeetCode problems using the local 0-leet
 
 save logs of the workflow in /tmp/leet-<date and time>
 
+## git rules
+
+Apply to all five repos (algorithm-java, InCodeLearning-Python3, CSAPP, in_code_learning_rust, astro-leet):
+
+- Commit directly on the repo's default branch (`master` for algorithm-java, CSAPP, in_code_learning_rust; `main` for InCodeLearning-Python3 and astro-leet). Never create a feature/topic branch (e.g. `codex/...`) and never open a pull request.
+- Before committing: `git fetch origin && git rebase origin/<default>` so the push is a fast-forward.
+- Push with `git push origin <default>`. If the push is rejected as non-fast-forward, fetch, rebase again, and retry. Never force-push.
+- Leave each checkout on its default branch when done.
+
 ## commands to run unit tests
 
 replace the argument in commands below with the newly generated test file with to run tests only in that file
@@ -23,11 +32,11 @@ replace the argument in commands below with the newly generated test file with t
 1. comment on lines where appropriate to incicate time and space complexities, e.g., two nested for loops, outer O(m), inner O(n), so together O(m*n).
 1. use 3 subagents to work in parallel to implement the solutions and unit tests in the other three programming languages. if solution already exists in a repo (for exmaple, the java repo has many solutions not included in a blog psot yet), just use that solution directly, agent do not need to re-implement.
 1. run the unit tests (refer to commands above) and modify until all tests pass
-1. after user finish, use 4 subagents to commit in the 4 repos (for CSAPP/leetcode repo, commit in parent folder CSAPP) and push all 4 repos
+1. after user finish, use 4 subagents to commit in the 4 repos (for CSAPP/leetcode repo, commit in parent folder CSAPP) and push all 4 repos directly to their default branches (see git rules above; no feature branch)
 1. following the template `astro-leet/src/content/blog/_0-leet-template.md`, **use code committed and pushed in above step** to create a markdown file (name `leet-<4 digit id>-<kebab-title>.md`) to explain the solutions (including time and space complexities). Draw diagrams with pure ascii as needed to help the explanation. If equation is needed, refer to https://katex.org/docs/api. make sure the constraints section from leetcode and link to the question is included.
 1. remove the line `draft: true` and make sure the line `featured: true` is in the file.
 1. look for oldest posts with `featured: true` line (can use a temp file to remember), keep 10 most recent featured post in total
-1. commit and push astro-leet repo.
+1. commit on `main` and push astro-leet repo to `origin main` (see git rules above; no feature branch).
 
 See [references.md](references.md) for repo layouts and file conventions.
 

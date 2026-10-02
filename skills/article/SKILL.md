@@ -9,6 +9,13 @@ Another good [example](../../../astro-leet/src/data/blog/aiml-generative-ai-larg
 
 for git operations, see [token path](../../config/pat.path.md)
 
+## git rules
+
+- Commit directly on the repo's default branch (`main`). Never create a feature/topic branch (e.g. `codex/...`, `blog/...`) and never open a pull request.
+- Before committing: `git fetch origin && git rebase origin/main` so the push is a fast-forward.
+- Push with `git push origin main`. If the push is rejected as non-fast-forward, fetch, rebase again, and retry. Never force-push.
+- Leave the checkout on `main` when done.
+
 save logs of the workflow in /tmp/blog-article-<date and time>
 
 ## workflow
@@ -20,4 +27,4 @@ save logs of the workflow in /tmp/blog-article-<date and time>
 1. draw diagrams with pure ascii as needed
 1. point to source code where ncecessary
 1. include references
-1. commit and push
+1. commit on `main` and push to `origin main` (see git rules above; no feature branch)
